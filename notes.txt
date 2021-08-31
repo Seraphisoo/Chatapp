@@ -1,0 +1,55 @@
+git init
+git status
+touch research.txt    //create new file
+ .gitignore   
+ git add .
+ git branch -M main(only need to upload the current folder)
+git remote set-url origin
+ git commit -m
+ git remote origin https://github.com/Seraphisoo/solid-invention.git
+ git log   //check the commit status
+ git push   //update existing file 
+ git push -u origin main    //same as above
+
+ ==================================================================
+ git status
+ git add .
+ git status
+ git init 
+ git status
+ git commit -m"xxxxxx"
+ git branch -M main
+ git remote add origin +website(github)
+ git push origin main
+=========================================================================
+
+mkdir folername 
+cd new  folder 
+git clone link
+
+===============================================================
+bat = batch file 
+
+=================================================================
+postman:
+{"name": "James", "message": "What about your mission now."}
+============================================================
+npm install --save body-parser
+===========================================================
+JSON stands for JavaScript Object Notation
+
+JSON is a text format for storing and transporting data
+
+JSON is "self-describing" and easy to understand
+
+================================================================
+npm install --save socket.io
+npm install --save mongoose
+npm install --save body-parser
+================================================================
+Unfinished subject:
+- upload to github
+- send message function is not working
+- can't approach to mongodb
+=================================================================
+Heroku:
