@@ -15,6 +15,7 @@
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="shortcut icon" href="FACE05.ICO" />
     <link rel="stylesheet" type="text/css" href="mystyle.css" />
     <title>Document Test Chatapp</title>
   </head>
@@ -59,7 +60,7 @@
         });
         function addMessage(message) {
           $("#messages").append(
-            `<h5>${message.name}:&nbsp  ${message.message}</h5><hr />`
+            `<h5><span class="sendname">${message.name}</span>:&nbsp  ${message.message}</h5><hr />`
           );
         }
         function getMessages() {
@@ -71,7 +72,7 @@
         }
         function postMessages(message) {
           //$.post("http://localhost:3010/messages", message);
-          $.post("https://salty-sands-34747.herokuapp.com/", message);
+          //$.post("https://salty-sands-34747.herokuapp.com/", message);
         }
       </script>
     </div>

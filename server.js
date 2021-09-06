@@ -3,6 +3,8 @@ var bodyParser = require('body-parser')
 const app = express()
 var http = require('http').Server(app)
 var io = require('socket.io')(http)
+const socketio = require('socket.io')
+
 var mongoose = require('mongoose')
 
 const port = process.env.PORT || 3010
@@ -11,8 +13,9 @@ app.use(express.static(__dirname))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
 
-var dbUrl = 'mongodb+srv://Seraphisoo:<613413>@cluster0.rika4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+var dbUrl = 'mongodb+srv://Seraphisoo:613413@cluster0.rika4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 //mongodb+srv://Seraphisoo:613413@cluster0.rika4.mongodb.net/chatappdb?retryWrites=true&w=majority
+//var dbUrl = 'mongodb+srv://Admin:Sh268268@chatapp.vrbrl.mongodb.net/chatappdb?retryWrites=true&w=majority'
 
 var Message = mongoose.model('Message', {
     name : String, message: String
@@ -51,7 +54,11 @@ mongoose.connect(dbUrl, (err) => {
     //if (err) return console.log(err);
     console.log('Mongodb connection successful')
     })
-    
+
+    io.on("connection", (socket) => {
+        console.log('user connected'); // true
+      });
+      
 var server = app.listen(port, () => {
     console.log('Server is listening on port', port)
 })
